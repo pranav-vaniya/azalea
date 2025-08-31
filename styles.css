@@ -33,3 +33,32 @@ input[type="number"] {
 	appearance: textfield;
 	-moz-appearance: textfield;
 }
+
+.error-message-container {
+	display: flex;
+	flex-direction: row;
+	background-color: #dc3545;
+	padding: 8px;
+	border-radius: 4px;
+	color: white;
+	display: none;
+}
+
+.settings-button {
+	display: flex;
+}
+
+.weight-och-rate-left-cell {
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+
+.weight-och-rate-right-cell {
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+
+.weight-och-rate-input-row td,
+.weight-och-rate-input-row td input {
+	background-color: azure;
+}

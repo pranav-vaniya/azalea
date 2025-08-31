@@ -18,41 +18,84 @@
 					<img src="icons/icon-512.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top" />
 					azalea
 				</a>
+				<button class="btn settings-button" data-bs-toggle="modal" data-bs-target="#settings-modal">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+						<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+						<path
+							d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"
+						/>
+					</svg>
+				</button>
 			</div>
 		</nav>
 
 		<div class="container-fluid">
+			<div class="error-message-container" id="error-message-container">
+				<span id="error-message" class="error-message"></span>
+				<button type="button" class="btn btn-danger error-message-hide-button" onclick="HideErrorMessage();">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+						<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+					</svg>
+				</button>
+			</div>
+
 			<div class="form-floating mb-2">
-				<input type="number" class="form-control border-0" id="gold-price-user-input" placeholder="0" value="0" />
+				<input type="number" class="form-control form-control-lg border-0" id="gold-price-user-input" placeholder="0" value="0" />
 				<label for="gold-price-user-input">24K Gold (100 g)</label>
 			</div>
 
-			<table class="table table-borderless table-hover">
+			<hr />
+
+			<table class="table table-borderless table-hover text-center mb-3">
 				<thead>
 					<tr>
-						<th scope="col">First</th>
-						<th scope="col">Last</th>
-						<th scope="col">Handle</th>
+						<th scope="col" style="width: 30%">Fine Wt.</th>
+						<th scope="col" style="width: 30%">OCH</th>
+						<th scope="col">Rate</th>
+					</tr>
+				</thead>
+				<tbody id="weight-och-rate-table-body"></tbody>
+			</table>
+
+			<hr />
+
+			<table class="table table-borderless table-hover text-center table-sm">
+				<thead>
+					<tr>
+						<th scope="col" style="width: 30%">Rate</th>
+						<th scope="col" style="width: 30%">Diff</th>
+						<th scope="col">MCX</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>Mark</td>
-						<td>Otto</td>
-						<td>@mdo</td>
-					</tr>
-					<tr>
-						<td>Jacob</td>
-						<td>Thornton</td>
-						<td>@fat</td>
-					</tr>
-					<tr>
-						<td>John</td>
-						<td>Doe</td>
-						<td>@social</td>
+						<td>
+							<input class="form-control border-0 text-center p-0" type="number" placeholder="0" value="0" id="user-mcx-rate-input" />
+						</td>
+						<td>
+							<input class="form-control border-0 text-center p-0" type="number" placeholder="0" value="0" id="user-mcx-diff-input" />
+						</td>
+						<td id="user-mcx-output">0</td>
 					</tr>
 				</tbody>
 			</table>
+		</div>
+
+		<!-- settings modal -->
+		<div class="modal fade" id="settings-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="settings-modal-title" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="settings-modal-title">Settings</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">Will Be Added Soon :)</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-success">Save</button>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<script src="libraries/bootstrap/js/bootstrap.min.js"></script>

@@ -53,7 +53,6 @@ const FILES_TO_CACHE = [
 	"./libraries/bootstrap/js/bootstrap.js.map",
 	"./libraries/bootstrap/js/bootstrap.min.js",
 	"./libraries/bootstrap/js/bootstrap.min.js.map",
-	"./libraries/jquery/jquery-3.7.1.min.js",
 ];
 
 self.addEventListener("install", (event) => {
