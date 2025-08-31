@@ -7,187 +7,56 @@
 		<meta name="theme-color" content="#af4c0f" />
 		<link rel="manifest" href="manifest.webmanifest" />
 		<link rel="icon" href="icons/icon-192.png" />
+		<link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 
 	<body>
-		<nav class="nav-container">
-			<img src="icons/icon-512.png" class="nav-image" />
-			<span class="nav-title">azalea</span>
+		<nav class="navbar bg-body-tertiary mb-3">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="icons/icon-512.png" alt="Logo" width="32" height="32" class="d-inline-block align-text-top" />
+					azalea
+				</a>
+			</div>
 		</nav>
 
-		<div class="user-input-price-container">
-			<small class="user-input-price-title">24K Gold (100 g)</small>
-			<div class="user-input-price-inner-container">
-				<span class="user-input-price-currency">&#8377;</span>
-				<input type="number" class="user-input-price-input" id="user-input-price-input" placeholder="0" />
+		<div class="container-fluid">
+			<div class="form-floating mb-2">
+				<input type="number" class="form-control border-0" id="gold-price-user-input" placeholder="0" value="0" />
+				<label for="gold-price-user-input">24K Gold (100 g)</label>
 			</div>
+
+			<table class="table table-borderless table-hover">
+				<thead>
+					<tr>
+						<th scope="col">First</th>
+						<th scope="col">Last</th>
+						<th scope="col">Handle</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Mark</td>
+						<td>Otto</td>
+						<td>@mdo</td>
+					</tr>
+					<tr>
+						<td>Jacob</td>
+						<td>Thornton</td>
+						<td>@fat</td>
+					</tr>
+					<tr>
+						<td>John</td>
+						<td>Doe</td>
+						<td>@social</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 
-		<div class="for-test">
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g)</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-			<div class="user-input-price-container">
-				<small class="user-input-price-title">24K Gold (100 g) last one</small>
-				<div class="user-input-price-inner-container">
-					<span class="user-input-price-currency">&#8377;</span>
-					<input type="number" class="user-input-price-input" placeholder="999999" />
-				</div>
-			</div>
-		</div>
-
+		<script src="libraries/bootstrap/js/bootstrap.min.js"></script>
+		<script src="libraries/jquery/jquery-3.7.1.min.js"></script>
 		<script src="script.js"></script>
 	</body>
 </html>

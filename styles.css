@@ -19,13 +19,6 @@
 
 * {
 	font-family: "Poppins";
-	padding: 0px;
-	margin: 0px;
-	box-sizing: border-box;
-}
-
-body {
-	background-color: var(--background-color);
 }
 
 /* Hide spinners for number inputs */
@@ -39,63 +32,4 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
 	appearance: textfield;
 	-moz-appearance: textfield;
-}
-
-/* nav */
-
-.nav-container {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 4px 8px;
-	gap: 8px;
-	background-color: #fbe9e0;
-	margin-bottom: 8px;
-}
-
-.nav-image {
-	width: 36px;
-	height: 36px;
-}
-
-.nav-title {
-	font-size: 24px;
-	color: var(--primary-color);
-}
-
-/* user input price */
-
-.user-input-price-container {
-	display: flex;
-	flex-direction: column;
-	gap: 4px;
-	margin: 0px 8px;
-}
-
-.user-input-price-inner-container {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	gap: 4px;
-}
-
-.user-input-price-currency {
-	font-family: "Poppins";
-	color: green;
-	font-size: 20px;
-}
-
-.user-input-price-input {
-	background-color: var(--background-color);
-	border: none;
-	font-size: 20px;
-	margin: 0px;
-	padding: 0px;
-	color: green;
-	font-family: "JetBrains Mono";
-	flex: 1;
-}
-
-.user-input-price-input:focus {
-	outline: none;
 }
