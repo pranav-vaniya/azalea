@@ -1,4 +1,4 @@
 export const NavLinks = {
-  Home: "/",
-  Settings: "/settings",
+  Home: "/azalea/",
+  Settings: "/azalea/settings",
 };
