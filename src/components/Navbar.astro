@@ -1,5 +1,5 @@
 ---
-import { NavLinks } from "../utils/constants";
+import { GithubRepoLink, NavLinks } from "../utils/constants";
 
 const { activePage } = Astro.props;
 ---
@@ -17,6 +17,9 @@ const { activePage } = Astro.props;
 				</li>
 				<li class="nav-item">
 					<a class=`nav-link ${activePage == NavLinks.Settings ? "active":""}` href={NavLinks.Settings}>Settings</a>
+				</li>
+				<li class="nav-item">
+					<a class=`nav-link` href={GithubRepoLink} target="_blank">Github</a>
 				</li>
 			</ul>
 		</div>
