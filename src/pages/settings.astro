@@ -1,6 +1,9 @@
 ---
+import ThemeSelector from "../components/ThemeSelector.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { NavLinks } from "../utils/constants";
 ---
 
-<BaseLayout title="Settings" activePage={NavLinks.Settings}> Settings </BaseLayout>
+<BaseLayout title="Settings" activePage={NavLinks.Settings}>
+	<ThemeSelector />
+</BaseLayout>

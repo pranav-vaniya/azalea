@@ -1,0 +1,71 @@
+<div class="main-container border p-3 rounded ps-4 pe-4">
+	<span class="fs-5">Theme</span>
+
+	<div class="radio-button-container">
+		<input type="radio" class="btn-check" name="options-base" id="dark-theme-radio-button" autocomplete="off" />
+		<label class="btn btn-outline-secondary" for="dark-theme-radio-button"><i class="bi bi-moon-fill"></i></label>
+
+		<input type="radio" class="btn-check" name="options-base" id="system-theme-radio-button" autocomplete="off" />
+		<label class="btn btn-outline-secondary" for="system-theme-radio-button"><i class="bi bi-sliders2"></i></label>
+
+		<input type="radio" class="btn-check" name="options-base" id="light-theme-radio-button" autocomplete="off" />
+		<label class="btn btn-outline-secondary" for="light-theme-radio-button"><i class="bi bi-brightness-high-fill"></i></label>
+	</div>
+</div>
+
+<style>
+	.main-container {
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+		align-items: center;
+		width: fit-content;
+	}
+
+	.radio-button-container {
+		display: flex;
+		flex-direction: row;
+		gap: 12px;
+	}
+
+	label {
+		border-radius: 50%;
+		height: 36px;
+		width: 36px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
+
+<script>
+	// get saved theme from localstorage and select respective radio button
+	const localStorageTheme = localStorage.getItem("preferred-color-theme");
+
+	const radioButton = document.getElementById(`${localStorageTheme ?? "system"}-theme-radio-button`) as HTMLInputElement;
+
+	if (radioButton) {
+		radioButton.checked = true;
+	}
+
+	// set event listeners for radio button changes
+	const themeRadios = document.querySelectorAll('input[name="options-base"]');
+
+	themeRadios.forEach((radio) => {
+		radio.addEventListener("change", (e) => {
+			const target = e.target as HTMLInputElement;
+			const preferredTheme = target.id.split("-")[0];
+			localStorage.setItem("preferred-color-theme", preferredTheme);
+
+			if (preferredTheme === "dark") {
+				document.body.setAttribute("data-bs-theme", "dark");
+			} else if (preferredTheme === "light") {
+				document.body.setAttribute("data-bs-theme", "light");
+			} else {
+				const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+				document.body.setAttribute("data-bs-theme", prefersDark ? "dark" : "light");
+			}
+		});
+	});
+</script>
